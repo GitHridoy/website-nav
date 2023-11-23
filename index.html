@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nav-bar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h2>D <span style="color: yellow;">K</span> </h2>
+            </div>
+            <ul class="ul">
+                <li><a class="active" href=""><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="">Product</a></li>
+                <li><a href="">Courses</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+                <div class="close">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </ul>
+            <div class="login">
+                <button><i class="fa-solid fa-user"></i> Login</button>
+            </div>
+        </nav>
+        <div class="manu" id="button">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+    <script>
+        let manubutton = document.getElementById('button');
+        let ul = document.querySelector('.ul');
+        let close = document.querySelector('.close');
+        manubutton.addEventListener('click', ()=>{
+            ul.classList.add('show')
+        });
+        close.addEventListener('click', ()=>{
+            ul.classList.remove('show')
+        })
+    </script>
+</body>
+</html>
